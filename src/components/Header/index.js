@@ -10,9 +10,13 @@ const Header = () => {
   const showMenu = () => {
     const toggle = document.getElementById('nav-toggle');
     const nav = document.getElementById('nav-menu');
+    const buttonShow = document.querySelector('.bx-menu');
+    const buttonClose = document.querySelector('.bx-x');
+    buttonShow.style.display = "none";
+    buttonClose.style.display = "block";
     if (toggle && nav) {
       nav.classList.toggle("show-menu");
-    }
+    } 
   }
 
   const navLink = document.querySelectorAll('.nav__link');
@@ -75,6 +79,7 @@ const Header = () => {
 
       <div className="nav__toggle" id="nav-toggle" onClick={showMenu}>
         <i className='bx bx-menu'></i>
+        <i className='bx bx-x'></i>
       </div>
     </nav>
   </header>
