@@ -1,0 +1,90 @@
+.bd-container {
+  max-width: 1024px;
+  width: calc(100% - 2rem);
+  margin: 0 1rem;
+  color: white;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #000;
+}
+
+.nav {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__menu { 
+  padding-top: 1.5rem; 
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding-left: 1.5rem;
+    text-align: center;
+    background-color: #000;
+    transition: .4s;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+.nav__item {
+  margin-bottom: 1.5rem;
+}
+
+.nav__link {
+  color: white;
+  transition: .3s;
+}
+
+.nav__logo, .nav__toggle {
+  color: white;
+}
+
+.nav__toggle {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.show-menu {
+  top: 3rem;
+}
+
+.active{
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -.7rem;
+  left: 0;
+  width: 65%;
+  height: 3px;
+  background-color: white;
+}
+
+.scroll-header{
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.scroll-header .nav__logo, .scroll-header .nav__toggle, .scroll-header .nav__link {
+  color: #2F0A0D;
+}
+
+.scroll-header .nav__menu {
+  background-color: white;
+}
