@@ -16,28 +16,38 @@
     z-index: 10;
     padding-top: .5rem;
     margin-top: 80%;
+    @media screen and (min-width: 768px) {
+      margin-top: 45%;
+      padding-left: 2.5rem;
+      margin-left: 1rem;
+    }
+    @media screen and (min-width: 1025px) {
+      margin-top: 15%;
+      margin-left: 3rem;
+    }
   }
 
   &__name {
     font-size: 2.1rem;
     padding: .5rem 0;
+    @media screen and (min-width: 768px) {
+      font-size: 4.5rem;
+    }
   }
 
   &__greeting, &__profession {
     display: block;
     font-weight: bold;
-  } 
-
-  &__greeting {
     font-size: 1rem;
     color: #FFE6C1;
-  }
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
+  } 
 
   &__profession {
     padding-top: .3rem;
-    font-size: 1rem;
     margin-bottom: 1.5rem;
-    color: #FFE6C1;
   }
 
   &__img {
@@ -55,6 +65,9 @@
   &__social {
     display: flex;
     padding-top: 3rem;
+    @media screen and (min-width: 1025px) {
+      margin-left: 3rem;
+    }
   }
 
   &__social-icon {
@@ -64,11 +77,16 @@
     color: white;
     padding-right: 1rem;
     font-size: 2rem;
+    @media screen and (min-width: 768px) {
+      font-size: 3rem;
+      margin-left: 1rem;
+    }
   }
 
   &__social-icon:hover {
     color: #7B6F72;
   }
+
 }
 
 .button {
@@ -78,6 +96,10 @@
   padding: .75rem 1rem;
   border-radius: .25rem;
   transition: .3s;
+  @media screen and (min-width: 768px) {
+    font-size: 2rem;
+    border: 2px solid white;
+  }
 }
 
 .button:hover {
@@ -87,3 +109,5 @@
 .button-light {
   background-color: #7B6F72;
 }
+
+

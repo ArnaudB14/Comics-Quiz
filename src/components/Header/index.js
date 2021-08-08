@@ -19,10 +19,25 @@ const Header = () => {
     } 
   }
 
+  const hideMenu = () => {
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('nav-menu');
+    const buttonShow = document.querySelector('.bx-menu');
+    const buttonClose = document.querySelector('.bx-x');
+    buttonShow.style.display = "block";
+    buttonClose.style.display = "none";
+    if (toggle && nav) {
+      nav.classList.toggle("show-menu");
+    } 
+  }
   const navLink = document.querySelectorAll('.nav__link');
   const linkAction =() => {
     const navMenu = document.getElementById('nav-menu');
     navMenu.classList.remove("show-menu");
+    const buttonShow = document.querySelector('.bx-menu');
+    const buttonClose = document.querySelector('.bx-x');
+    buttonShow.style.display = "block";
+    buttonClose.style.display = "none";
   }
 
   function scrollHeader(){
@@ -77,9 +92,9 @@ const Header = () => {
         </ul>
       </div>
 
-      <div className="nav__toggle" id="nav-toggle" onClick={showMenu}>
-        <i className='bx bx-menu'></i>
-        <i className='bx bx-x'></i>
+      <div className="nav__toggle" id="nav-toggle">
+        <i className='bx bx-menu' onClick={showMenu}></i>
+        <i className='bx bx-x' onClick={hideMenu}></i>
       </div>
     </nav>
   </header>

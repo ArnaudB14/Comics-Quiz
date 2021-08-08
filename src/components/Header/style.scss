@@ -1,5 +1,4 @@
 .bd-container {
-  max-width: 1024px;
   width: calc(100% - 2rem);
   margin: 0 1rem;
   color: white;
@@ -13,6 +12,16 @@
   z-index: 100;
   padding: .5rem .5rem;
   background-color: rgba(0,0,0,.3);
+  @media screen and (min-width: 768px) {
+    padding: 1.5rem 1.5rem;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 2rem 2rem;
+    background-color: transparent;
+    display:flex; 
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .nav {
@@ -34,8 +43,27 @@
       border-radius: 0 0 1rem 1rem;
       background-color: rgba(0,0,0,.3);
     }
+    @media screen and (min-width: 768px) {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
   }
 
+  &__list {
+    @media screen and (min-width: 1024px) {
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 12.5vh 12.5vh;
+      align-items: center;
+      padding-top: 8.5rem;
+      font-size: 2rem;
+    }
+    @media screen and (min-width: 1025px) {
+      padding-top: 4.5rem;
+      font-size: 1.75rem;
+    }
+  }
+  
   &__item {
     margin-bottom: 1.5rem;
   }
@@ -45,17 +73,25 @@
     transition: .3s;
   }
 
-  &__logo {
-    font-size: 1.5rem;
-  }
-
   &__logo, &__toggle {
     color: white;
+    font-size: 1.7rem;
+    @media screen and (min-width: 768px) {
+      font-size: 2.5rem;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 4rem;
+    }
+    @media screen and (min-width: 1025px) {
+      font-size: 3rem;
+    }
   }
 
   &__toggle {
-    font-size: 1.3rem;
     cursor: pointer;
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
   }
 }
 
@@ -89,6 +125,8 @@
 .scroll-header .nav__menu {
   background-color: white;
 }
+
 .bx-x {
   display: none;
 }
+
