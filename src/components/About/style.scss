@@ -1,0 +1,66 @@
+.About {
+  color: white;
+  margin: 5rem 2rem 0 2rem;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    margin: 10rem 3rem 0 3rem;
+  }
+  @media screen and (min-width: 1024px) {
+    margin: 15rem 7rem 0 7rem;
+  }
+  @media screen and (min-width: 1025px) {
+    margin: 15rem 35rem 0 7rem;
+  }
+  &__title {
+    font-size: 2rem;
+    @media screen and (min-width: 1024px) {
+      text-align: left;
+      font-size: 2.2rem;
+      letter-spacing: -2px;
+    }
+  }
+}
+
+.aboutMe {
+  &__text {
+    text-align: left;
+    padding-top: 2.5rem;
+    @media screen and (min-width: 1024px) {
+      padding-top: 3rem;
+      line-height: 1.4rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__strong {
+    font-weight: bold;
+  }
+}
+
+
+.myWorks {
+  padding-top: 4rem;
+  @media screen and (min-width: 1024px) {
+    padding-top: 8rem;
+  }
+  &__title {
+    padding-bottom: 3rem;
+    @media screen and (min-width: 1024px) {
+      padding-bottom: 5rem;
+    }
+  }
+
+  &__carousel {
+    @media screen and (min-width: 1024px) {
+    margin-left: auto;
+    }
+  }
+}
+
+.linkToProject {
+  margin-top: 2rem;
+  text-align: left;
+  @media screen and (min-width: 1024px) {
+    margin-top: 4rem;
+  }
+}

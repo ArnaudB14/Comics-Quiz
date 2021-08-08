@@ -53,7 +53,7 @@ const Header = () => {
   return (
   <header className="header" id="header">
     <nav className="nav bd-container">
-      <a href="#" className="nav__logo">Portfolio</a>
+      <h1 className="nav__logo">Portfolio</h1>
       <div className="nav__menu" id="nav-menu">
         <ul className="nav__list">
           <li className="nav__item">

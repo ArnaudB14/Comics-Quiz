@@ -50,18 +50,6 @@
     margin-bottom: 1.5rem;
   }
 
-  &__img {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    z-index: -1000;
-  }
-
-  &__img img {
-    width: 100vw;
-    height: 100vh;
-  }
-
   &__social {
     display: flex;
     padding-top: 3rem;
@@ -89,14 +77,14 @@
 
   &__photo {
     display: none;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1025px) {
       display: block;
       position: absolute;
     }
   }
   &__card-photo{
     display: none;
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1025px) {
       display: block;
       width:250px;
       height:250px;
@@ -104,7 +92,7 @@
       position: relative;
       margin-top: -15rem;
       margin-left: 80rem;
-      opacity: 0.7;
+      opacity: 0.5;
     }
   }
 }

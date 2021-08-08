@@ -1,8 +1,6 @@
 // == Import npm
 import React from 'react';
-import HomeBackground from 'src/assets/img/home.jpg';
 import arnaud from 'src/assets/img/arnaud.png'
-// import CV from 'src/assets/cv.pdf';
 
 // == Import
 import './style.scss';
@@ -24,9 +22,6 @@ const Homepage = () => (
         <div className="home__social">
           <a href="https://www.linkedin.com/in/arnaud-barbey/" target="_blank" className="home__social-icon"><i className='bx bxl-linkedin-square'></i></a>
           <a href="https://github.com/ArnaudB14" target="_blank" className="home__social-icon"><i className='bx bxl-github' ></i></a>
-        </div>
-        <div className="home__img">
-          <img src={HomeBackground} alt="" />
         </div>
       </div>
     </section>
