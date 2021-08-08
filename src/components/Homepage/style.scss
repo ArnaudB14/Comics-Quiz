@@ -87,6 +87,26 @@
     color: #7B6F72;
   }
 
+  &__photo {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: block;
+      position: absolute;
+    }
+  }
+  &__card-photo{
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: block;
+      width:250px;
+      height:250px;
+      border-radius: 50%;
+      position: relative;
+      margin-top: -15rem;
+      margin-left: 80rem;
+      opacity: 0.7;
+    }
+  }
 }
 
 .button {
