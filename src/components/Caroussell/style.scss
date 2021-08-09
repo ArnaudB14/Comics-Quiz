@@ -1,0 +1,36 @@
+.projets{
+  margin:auto;
+  margin-top:2rem;
+  min-height: 50vh;
+  @media (min-width:1000px){
+      margin-top:4rem;
+  }
+}
+.projet{
+  line-height: 110%;
+  margin-bottom:1rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 110%;
+  
+}
+
+.myWorks {
+  &__title {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    @media screen and (min-width: 1024px) {
+      padding-bottom: 5rem;
+      padding-top: 9rem;
+    }
+  }
+}
+
+.maestra-text, .github-text {
+  display: none;
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
+}

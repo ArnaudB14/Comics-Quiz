@@ -1,18 +1,12 @@
 // == Import npm
 import React from 'react';
-import maestra from 'src/assets/img/maestra.png'
-import githubApi from 'src/assets/img/github-api.png'
-import {Carousel} from '3d-react-carousal';
-import { Link } from "react-router-dom";
+import Caroussell from 'src/components/Caroussell'
+
 // == Import
 import './style.scss';
 
 // == Composant
 const About = () => {
-  let slides = [
-    <img src={maestra} alt="Maestra" />,
-    <img src={githubApi} alt="Githup API" />,
-  ];
   return(
   <div className="About">
     <div className="aboutMe">
@@ -27,20 +21,10 @@ const About = () => {
           <strong className="aboutMe__strong">Aujourdhui, mon objectif est d'acquérir de nouvelles compétences sur les technologies que je connais déjà ou sur d'autres stack. Je suis donc à la recherche d'une première expérience en tant que développeur web front end, stagiaire ou salarié.</strong>
       </p>
     </div>
-    <div className="myWorks">
-      <h2 className="myWorks__title About__title">Mes projets</h2>
-      <div className="myWorks__carousel">
-        <Carousel slides={slides} className="myWorks__carousel1"/>
-      </div>
-      <h3 className="linkToProject">Lien vers mes projets :</h3>
-      <ul>
-        <li><a href="https://maestra.surge.sh">Maestra</a></li>
-        <li><a href="http://api-github-oclock.surge.sh/">API Github</a></li>
-      </ul>
-    </div>
-    
+    <Caroussell />
   </div>
 )};
 
 // == Export
 export default About;
+
