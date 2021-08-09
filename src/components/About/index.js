@@ -22,6 +22,9 @@ const About = () => {
       </p>
     </div>
     <Caroussell />
+    <div className="skills">
+      <h2 className="skills__title About__title">Mes compétences</h2>
+    </div>
   </div>
 )};
 

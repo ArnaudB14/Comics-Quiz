@@ -21,6 +21,8 @@
   }
 }
 
+// ABOUT ME
+
 .aboutMe {
   &__text {
     text-align: left;
@@ -37,6 +39,7 @@
   }
 }
 
+// WORKS
 
 .react-3d-carousel .slider-container .slider-right div {
   border: none;
@@ -44,4 +47,15 @@
 
 .react-3d-carousel .slider-container .slider-left div {
   border: none;
+}
+
+// SKILLS
+
+.skills{
+  &__title {
+    padding-top: 4rem;
+    @media screen and (min-width: 1024px) {
+      padding-top: 6rem;
+    }
+  }
 }
