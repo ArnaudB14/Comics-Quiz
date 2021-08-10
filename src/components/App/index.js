@@ -2,6 +2,7 @@
 import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import HomeBackground from 'src/assets/img/home.jpg';
+import "semantic-ui-css/semantic.min.css";
 
 // == Import
 import './style.scss';
