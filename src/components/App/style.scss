@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,::before,::after {
+  box-sizing: border-box;
+}
+
+
 .app {
   &__img {
     position: fixed;

@@ -95,6 +95,10 @@
     transition: .3s;
   }
 
+  &__logo {
+    padding-top: 0.9rem;
+  }
+  
   &__logo, &__toggle {
     color: white;
     font-size: 1.7rem;
