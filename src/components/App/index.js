@@ -1,6 +1,6 @@
 // == Import npm
 import React from 'react';
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import HomeBackground from 'src/assets/img/home.jpg';
 
 // == Import
@@ -8,6 +8,7 @@ import './style.scss';
 import Header from "src/components/Header";
 import Homepage from "src/components/Homepage";
 import About from "src/components/About";
+import Contact from "src/components/Contact";
 
 // == Composant
 const App = () => (
@@ -22,6 +23,9 @@ const App = () => (
       </Route>
       <Route path="/about" exact>
         <About />
+      </Route>
+      <Route path="/contact" exact>
+        <Contact />
       </Route>
     </Switch>
   </div>
