@@ -90,6 +90,11 @@
     transition: .3s;
   }
 
+  &__link:hover {
+    color: rgb(165, 165, 165);
+    transition: .3s;
+  }
+
   &__logo, &__toggle {
     color: white;
     font-size: 1.7rem;
@@ -116,11 +121,11 @@
   top: 4rem;
 }
 
-.active{
+.nav__item .active{
   position: relative;
 }
 
-.active::after {
+.nav__item .active::after {
   content: '';
   position: absolute;
   bottom: -.7rem;

@@ -12,14 +12,16 @@ import './style.scss';
 const Caroussell = () => {
   let slides = [
     <div className="projet">
-      <a href="https://maestra.surge.sh"><img src={maestra} alt="maestra" className="maestra-project"/></a>
+      <a href="https://maestra.surge.sh"><img src={maestra} alt="maestra" className="maestra-project allProjects"/></a>
       <p className="maestra-text">Maestra est un projet de fin de formation qui regroupe différentes pilules contraceptives et qui permet de laisser des avis dessus.</p>
+      <a href="https://maestra.surge.sh" className="clickMe">Cliquez ici pour voir le projet</a>
      </div>
     ,
     <div className="projet">
       <div className="projet">
-        <a href="http://api-github-oclock.surge.sh/"><img src={githubApi} alt="GithubApi" className="github-project"/></a>
+        <a href="http://api-github-oclock.surge.sh/"><img src={githubApi} alt="GithubApi" className="github-project allProjects"/></a>
         <p className="github-text">Projet réalisé durant ma spécialisation. C'est un site qui permet de rechercher des repository sur GitHub.</p>
+        <a href="http://api-github-oclock.surge.sh/" className="clickMe">Cliquez ici pour voir le projet</a>
      </div>
   </div>
   ]

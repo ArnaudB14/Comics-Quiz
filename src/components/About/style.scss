@@ -9,7 +9,7 @@
     margin: 15rem 7rem 0 7rem;
   }
   @media screen and (min-width: 1025px) {
-    margin: 20rem 35rem 0 7rem;
+    margin: 20rem 35rem 0 10rem;
   }
   &__title {
     font-size: 2rem;
@@ -53,9 +53,63 @@
 
 .skills{
   &__title {
-    padding-top: 4rem;
+    padding-top: 2rem;
+    @media screen and (min-width: 768px) {
+      padding-top: 11rem;
+    }
     @media screen and (min-width: 1024px) {
       padding-top: 6rem;
     }
+    @media screen and (min-width: 1025px) {
+      padding-top: 6rem;
+    }
   }
+}
+
+
+.wrapperSkills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: .7rem;
+  margin-top: 2rem;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #181C23;
+    box-shadow: 1px 1px 21px 6px rgba(0,0,0,0.51);
+    padding: 1rem;
+    text-align: center;
+
+    &:nth-of-type(2n){
+      margin-right: 0;
+    }
+
+    & img{
+      width: 50px;
+    }
+
+    & p {
+      margin: 0;
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+  }
+  @media screen and (min-width: 700px){
+    grid-template-columns: repeat(4, 1fr)
+  }
+  @media screen and (min-width: 1025px){
+    grid-template-columns: repeat(6, 1fr)
+  }
+}
+
+.skillsToLearn__title {
+  font-size: 1.25rem;
+  padding-top: 2rem;
+}
+
+.wordpress-logo{
+  height: 70%;
 }
