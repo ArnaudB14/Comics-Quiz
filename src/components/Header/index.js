@@ -53,7 +53,16 @@ const Header = () => {
   return (
   <header className="header" id="header">
     <nav className="nav bd-container">
-      <h1 className="nav__logo">Portfolio</h1>
+      <h1 className="nav__logo">
+      <NavLink
+       className="nav__logo nav__link underline"
+              onClick={linkAction}
+              to="/"
+              exact
+              >
+              Portfolio
+            </NavLink>
+      </h1>
       <div className="header__border"></div>
       <div className="nav__menu" id="nav-menu">
         <ul className="nav__list">
