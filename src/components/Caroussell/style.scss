@@ -28,7 +28,7 @@
   }
 }
 
-.maestra-text, .github-text {
+.maestra-text, .github-text, .orecipes-text, .socket-text {
   display: none;
   @media screen and (min-width: 1024px) {
     display: block;
@@ -37,6 +37,13 @@
     height: 99%;
     padding: 0 5rem;
     padding-top: 15%;
+  }
+}
+
+.orecipes-text, .socket-text {
+  @media screen and (min-width: 1024px) {
+    height: 95%;
+    width: 100%;
   }
 }
 

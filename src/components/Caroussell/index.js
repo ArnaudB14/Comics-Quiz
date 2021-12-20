@@ -2,6 +2,8 @@
 import React from 'react';
 import maestra from 'src/assets/img/maestra.png'
 import githubApi from 'src/assets/img/github-api.png'
+import oRecipes from 'src/assets/img/oRecipes.png'
+import socket from 'src/assets/img/socket.png'
 
 const Carousel = require( '3d-react-carousal').Carousel;
 
@@ -24,6 +26,22 @@ const Caroussell = () => {
         <a href="http://api-github-oclock.surge.sh/" className="clickMe">Cliquez ici pour voir le projet</a>
      </div>
   </div>
+  ,
+  <div className="projet">
+      <div className="projet">
+        <a href="https://github.com/ArnaudB14/oRecipes"><img src={socket} alt="socket" className="socket-project allProjects"/></a>
+        <p className="socket-text">Découverte de socket.IO.</p>
+        <a href="https://github.com/ArnaudB14/oRecipes" className="clickMe">Cliquez ici pour voir le projet sur github</a>
+     </div>
+  </div>
+  ,
+  <div className="projet">
+  <div className="projet">
+    <a href="https://github.com/ArnaudB14/socket.io"><img src={oRecipes} alt="oRecipes" className="orecipes-project allProjects"/></a>
+    <p className="orecipes-text">Première création et utilisation d'une API lors de ma spécialisation en React.</p>
+    <a href="https://github.com/ArnaudB14/socket.io" className="clickMe">Cliquez ici pour voir le projet sur github</a>
+ </div>
+</div>
   ]
   return(
     <div className="projects">
