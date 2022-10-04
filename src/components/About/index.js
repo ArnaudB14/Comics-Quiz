@@ -15,6 +15,7 @@ import responsive from "src/assets/img/responsive-svg.svg"
 import github from "src/assets/img/github-svg.svg"
 import agile from "src/assets/img/agile-svg.svg"
 import php from "src/assets/img/php-svg.svg"
+import laravel from "src/assets/img/laravel-svg.svg"
 
 // == Import
 import './style.scss';
@@ -29,10 +30,13 @@ const About = () => {
           Après 3 ans de licence informatique où j'ai pu aborder les premières notions de développement web tel que HTML, CSS et JavaScript, j'ai finalement décidé de mon consacrer entièrement à ça. J'ai donc intégré l'école et suivi une formation intensive de 6 mois où j'ai pu renforcé mes bases et apprendre de nouvelles technologies. J'ai aussi vu la méthode de travail Agile et l'utilisation de Github. 
           <br />
           <br />
-          Pendant cette formation je me suis spécialisé sur du React, Redux et j'ai également vu les Hooks, le Scss, etc.
+          Pendant cette formation je me suis spécialisé sur du React, Redux et j'ai également vu les Hooks, le Scss, ou encore Laravel.
           <br />
           <br />
-          <strong className="aboutMe__strong">Aujourdhui, mon objectif est d'acquérir de nouvelles compétences sur les technologies que je connais déjà ou sur d'autres stack. Je suis donc à la recherche d'une première expérience en tant que développeur web front end, stagiaire ou salarié.</strong>
+          J'ai ensuite décidé d'apprendre Vue.js pour améliorer mon bagage en Front-end.
+          <br />
+          <br />
+          <strong className="aboutMe__strong">Actuellement, je suis en alternance chez Scenarii et je prépare en parallèle un Bac+3 Développeur Concepteur d'Applications.</strong>
       </p>
     </div>
     <Caroussell />
@@ -51,8 +55,13 @@ const About = () => {
           <div><img src={agile} alt="agile-svg" /><p>Agile</p></div>
           <div><img src={php} alt="php-svg" /><p>PHP</p></div>
           <div><img src={vue} alt="vue-svg" /><p>Vue.js</p></div>
+          <div><img src={laravel} alt="laravel-svg" /><p>Laravel</p></div>
         </div>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
   </div>
 )};
 
