@@ -1,37 +1,38 @@
-import React from "react";
-import emailjs from "emailjs-com";
-import { Form, Input, TextArea, Button } from "semantic-ui-react";
-import Swal from "sweetalert2";
-import "./style.scss";
+import React from 'react';
+import emailjs from 'emailjs-com';
+import { Form, Input, TextArea, Button } from 'semantic-ui-react';
+import Swal from 'sweetalert2';
+import './style.scss';
 
-const SERVICE_ID = "service_4xolwo9";
-const TEMPLATE_ID = "template_s5owvzu";
-const USER_ID = "user_3BmaluZsjevFA0SYKbST5";
+const SERVICE_ID = 'service_4xolwo9';
+const TEMPLATE_ID = 'template_s5owvzu';
+const USER_ID = 'user_3BmaluZsjevFA0SYKbST5';
 
 const Contact = () => {
-
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-      .then((result) => {
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+      (result) => {
         console.log(result.text);
         Swal.fire({
-          icon: "success",
-          title: "Message envoyé"
-        })
-      }, (error) => {
+          icon: 'success',
+          title: 'Message envoyé',
+        });
+      },
+      (error) => {
         console.log(error.text);
         Swal.fire({
-          icon: "error",
-          title: "Ooops, something went wrong",
+          icon: 'error',
+          title: 'Ooops, something went wrong',
           text: error.text,
-        })
-      });
-    e.target.reset()
+        });
+      },
+    );
+    e.target.reset();
   };
-  
-return (
-    <div className="Contact">
+
+  return (
+    <div className="contact">
       <Form onSubmit={handleOnSubmit}>
         <Form.Field
           id="form-input-control-email"
@@ -61,9 +62,11 @@ return (
           placeholder="Message…"
           required
         />
-        <Button type="submit" color="green">Envoyer</Button>
+        <Button type="submit" color="green">
+          Envoyer
+        </Button>
       </Form>
     </div>
   );
-}
+};
 export default Contact;
