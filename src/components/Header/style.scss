@@ -10,7 +10,7 @@
   top: 0;
   left: 0;
   z-index: 100;
-  padding: .5rem .5rem;
+  padding: 0.5rem 0.5rem;
   background-color: black;
   @media screen and (min-width: 768px) {
     padding: 1.5rem 1.5rem;
@@ -19,7 +19,7 @@
     position: absolute;
     padding: 2rem 2rem;
     background-color: transparent;
-    display:flex; 
+    display: flex;
     justify-content: space-between;
     align-items: center;
     // border-bottom: 1px solid white;
@@ -41,8 +41,8 @@
   justify-content: space-between;
   align-items: center;
 
-  &__menu { 
-    padding-top: 1.5rem; 
+  &__menu {
+    padding-top: 1.5rem;
     @media screen and (max-width: 1023px) {
       position: fixed;
       top: -100%;
@@ -50,7 +50,7 @@
       width: 100%;
       padding-left: 1.5rem;
       text-align: center;
-      transition: .4s;
+      transition: 0.4s;
       border-radius: 0 0 1rem 1rem;
       background-color: black;
     }
@@ -68,11 +68,11 @@
 
   &__list {
     @media screen and (min-width: 1024px) {
-      display:grid;
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 12.5vh 12.5vh;
       align-items: center;
-      padding-top: .5rem;
+      padding-top: 0.5rem;
       font-size: 2rem;
     }
     @media screen and (min-width: 1025px) {
@@ -80,26 +80,27 @@
       font-size: 1.75rem;
     }
   }
-  
+
   &__item {
     margin-bottom: 1.5rem;
   }
 
   &__link {
     color: white;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   &__link:hover {
     color: rgb(165, 165, 165);
-    transition: .3s;
+    transition: 0.3s;
   }
 
   &__logo {
     padding-top: 0.9rem;
   }
-  
-  &__logo, &__toggle {
+
+  &__logo,
+  &__toggle {
     color: white;
     font-size: 1.7rem;
     @media screen and (min-width: 768px) {
@@ -125,27 +126,29 @@
   top: 4rem;
 }
 
-.nav__item .active{
+.nav__item .active {
   position: relative;
 }
 
 .nav__item .active::after {
   content: '';
   position: absolute;
-  bottom: -.7rem;
+  bottom: -0.7rem;
   left: 0;
   width: 65%;
   height: 3px;
   background-color: white;
 }
 
-.scroll-header{
+.scroll-header {
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.scroll-header .nav__logo, .scroll-header .nav__toggle, .scroll-header .nav__link {
-  color: #2F0A0D;
+.scroll-header .nav__logo,
+.scroll-header .nav__toggle,
+.scroll-header .nav__link {
+  color: #2f0a0d;
 }
 
 .scroll-header .nav__menu {
@@ -155,4 +158,3 @@
 .bx-x {
   display: none;
 }
-
