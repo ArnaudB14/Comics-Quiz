@@ -17,10 +17,10 @@
     font-size: 17px;
     border-bottom: 1px solid white;
     padding-bottom: 5px;
-  }
 
-  &__link:hover {
-    color: rgb(165, 165, 165);
-    transition: 0.3s;
+    &:hover {
+      color: rgb(165, 165, 165);
+      transition: 0.3s;
+    }
   }
 }
