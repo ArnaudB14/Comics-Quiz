@@ -1,7 +1,7 @@
 .bd-container {
   width: calc(100% - 2rem);
   margin: 0 1rem;
-  color: white;
+  color: black;
 }
 
 .header {
@@ -11,7 +11,7 @@
   left: 0;
   z-index: 100;
   padding: 0.5rem 0.5rem;
-  background-color: black;
+  background-color: white;
   @media screen and (min-width: 768px) {
     padding: 1.5rem 1.5rem;
   }
@@ -22,16 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // border-bottom: 1px solid white;
-  }
-
-  &__border {
-    @media screen and (min-width: 1025px) {
-      border-bottom: 1px solid white;
-      padding-bottom: 7rem;
-      width: 55rem;
-      color: white;
-    }
+    // border-bottom: 1px solid black;
   }
 }
 
@@ -52,7 +43,7 @@
       text-align: center;
       transition: 0.4s;
       border-radius: 0 0 1rem 1rem;
-      background-color: black;
+      background-color: white;
     }
     @media screen and (min-width: 768px) {
       margin-top: 2rem;
@@ -68,25 +59,18 @@
 
   &__list {
     @media screen and (min-width: 1024px) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 12.5vh 12.5vh;
-      align-items: center;
-      padding-top: 0.5rem;
-      font-size: 2rem;
-    }
-    @media screen and (min-width: 1025px) {
-      padding-top: 4.5rem;
+      display: flex;
       font-size: 1.75rem;
     }
   }
 
   &__item {
     margin-bottom: 1.5rem;
+    margin: 0 1.5rem;
   }
 
   &__link {
-    color: white;
+    color: black;
     transition: 0.3s;
   }
 
@@ -99,14 +83,14 @@
     padding-top: 0.9rem;
 
     &:hover {
-      color: white;
+      color: black;
       transition: 0s;
     }
   }
 
   &__logo,
   &__toggle {
-    color: white;
+    color: black;
     font-size: 1.7rem;
     @media screen and (min-width: 768px) {
       font-size: 2.5rem;
@@ -142,11 +126,11 @@
   left: 0;
   width: 65%;
   height: 3px;
-  background-color: white;
+  background-color: black;
 }
 
 .scroll-header {
-  background-color: white;
+  background-color: black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -157,7 +141,7 @@
 }
 
 .scroll-header .nav__menu {
-  background-color: white;
+  background-color: black;
 }
 
 .bx-x {

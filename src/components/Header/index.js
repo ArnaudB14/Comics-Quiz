@@ -55,10 +55,9 @@ const Header = () => {
       <nav className="nav bd-container">
         <h1 className="nav__logo">
           <NavLink className="nav__logo nav__link underline" onClick={linkAction} to="/" exact>
-            Portfolio
+            Comics Quiz
           </NavLink>
         </h1>
-        <div className="header__border"></div>
         <div className="nav__menu" id="nav-menu">
           <ul className="nav__list">
             <li className="nav__item">
@@ -69,7 +68,7 @@ const Header = () => {
                 to="/"
                 exact
               >
-                Home
+                Quiz
               </NavLink>
             </li>
             <li className="nav__item">
@@ -77,10 +76,10 @@ const Header = () => {
                 className="nav__link underline"
                 activeClassName="active"
                 onClick={linkAction}
-                to="/about"
+                to="/inscription"
                 exact
               >
-                About
+                Inscription
               </NavLink>
             </li>
             <li className="nav__item">
@@ -88,10 +87,10 @@ const Header = () => {
                 className="nav__link underline"
                 activeClassName="active"
                 onClick={linkAction}
-                to="/contact"
+                to="/connexion"
                 exact
               >
-                Contact
+                Connexion
               </NavLink>
             </li>
           </ul>

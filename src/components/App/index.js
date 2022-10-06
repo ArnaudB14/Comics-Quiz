@@ -4,31 +4,30 @@ import { Switch, Route } from 'react-router-dom';
 
 // == Import
 import './style.scss';
-// import Header from 'src/components/Header';
+import Header from 'src/components/Header';
 // import Homepage from 'src/components/Homepage';
 // import About from 'src/components/About';
 // import Contact from 'src/components/Contact';
-// import Error404 from 'src/components/Error404';
+import Error404 from 'src/components/Error404';
 
 // == Composant
 const App = () => (
   <div className="app">
-    {/* <Header />
+    <Header />
     <Switch>
-      <Route path="/" exact>
+      {/* <Route path="/" exact>
         <Homepage />
-      </Route>
-      <Route path="/about" exact>
+      </Route> */}
+      {/* <Route path="/about" exact>
         <About />
-      </Route>
-      <Route path="/contact" exact>
+      </Route> */}
+      {/* <Route path="/contact" exact>
         <Contact />
-      </Route>
+      </Route> */}
       <Route>
         <Error404 />
       </Route>
-    </Switch> */}
-    <h1>Salut</h1>
+    </Switch>
   </div>
 );
 

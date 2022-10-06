@@ -2,7 +2,6 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: black;
   overflow-y: scroll;
 }
 
@@ -15,18 +14,18 @@ html {
 }
 
 
-.app {
-  &__img {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    z-index: -1000;
-  }
+// .app {
+//   &__img {
+//     position: fixed;
+//     right: 0;
+//     bottom: 0;
+//     z-index: -1000;
+//   }
 
-  &__img img {
-    width: 100vw;
-    height: 100vh;
-  }
+//   &__img img {
+//     width: 100vw;
+//     height: 100vh;
+//   }
 
-  margin-bottom: 10rem;
-}
+//   margin-bottom: 10rem;
+// }
