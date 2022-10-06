@@ -57,20 +57,20 @@
     "react-dom": "^17.0.2",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^5.2.0",
-    "surge": "^0.23.1",
+    "surge": "^0.23.1"
   },
   "description": "",
   "version": "1.0.0",
   "main": "postcss.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArnaudB14/portfolio.git"
+    "url": "git+https://github.com/ArnaudB14/Comics-Quiz.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ArnaudB14/portfolio/issues"
+    "url": "https://github.com/ArnaudB14/Comics-Quiz/issues"
   },
-  "homepage": "https://github.com/ArnaudB14/portfolio#readme"
+  "homepage": "https://github.com/ArnaudB14/Comics-Quiz#readme"
 }
