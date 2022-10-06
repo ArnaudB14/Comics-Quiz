@@ -97,6 +97,11 @@
 
   &__logo {
     padding-top: 0.9rem;
+
+    &:hover {
+      color: white;
+      transition: 0s;
+    }
   }
 
   &__logo,
