@@ -1,12 +1,30 @@
 // == Import npm
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, {useContext} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { signOut } from "firebase/auth";
+import {auth} from "../../firebase-config";
+import { UserContext } from '../../context/userContext';
 
 // == Import
 import './style.scss';
 
 // == Composant
-const Header = () => {
+export default function Header() {
+
+  const {currentUser} = useContext(UserContext)
+
+  const navigate = useNavigate()
+
+  const logOut = async () => {
+    try {
+      await signOut(auth)
+      navigate("/")
+    } catch {
+      alert("Pour diverses raisons, nous ne pouvons pas vous déconnecter, veuillez vérifier votre connexion et réésayer")
+    }
+  }
+
+  // RESPONSIVE MENU
   const showMenu = () => {
     const toggle = document.getElementById('nav-toggle');
     const nav = document.getElementById('nav-menu');
@@ -54,46 +72,57 @@ const Header = () => {
     <header className="header" id="header">
       <nav className="nav bd-container">
         <h1 className="nav__logo">
-          <NavLink className="nav__logo nav__link underline" onClick={linkAction} to="/" exact>
+          <Link className="nav__logo nav__link underline" onClick={linkAction} to="/">
             Comics Quiz
-          </NavLink>
+          </Link>
         </h1>
         <div className="nav__menu" id="nav-menu">
+          { !currentUser ? (
           <ul className="nav__list">
             <li className="nav__item">
-              <NavLink
+              <Link
                 className="nav__link underline"
-                activeClassName="active"
                 onClick={linkAction}
                 to="/"
-                exact
               >
-                Quiz
-              </NavLink>
+                Accueil
+              </Link>
             </li>
             <li className="nav__item">
-              <NavLink
+              <Link
                 className="nav__link underline"
-                activeClassName="active"
                 onClick={linkAction}
                 to="/inscription"
-                exact
               >
                 Inscription
-              </NavLink>
+              </Link>
             </li>
             <li className="nav__item">
-              <NavLink
+              <Link
                 className="nav__link underline"
-                activeClassName="active"
                 onClick={linkAction}
                 to="/connexion"
-                exact
               >
                 Connexion
-              </NavLink>
+              </Link>
             </li>
           </ul>
+            ) : 
+            <ul className="nav__list">
+            <li className="nav__item">
+              <Link
+                className="nav__link underline"
+                onClick={linkAction}
+                to="/"
+              >
+                Accueil
+              </Link>
+            </li>
+            <li className="nav__item nav__link underline" onClick={logOut}>
+                Déconnexion
+            </li>
+          </ul>
+          }
         </div>
         <div className="nav__toggle" id="nav-toggle">
           <i className="bx bx-menu" onClick={showMenu}></i>
@@ -102,7 +131,4 @@ const Header = () => {
       </nav>
     </header>
   );
-};
-
-// == Export
-export default Header;
+}

@@ -41,7 +41,7 @@ module.exports = merge(common, {
   },
 
   devServer: {
-    historyApiFallback:{index:'./index.html'},
+    historyApiFallback: true,
     contentBase: paths.build,
     clientLogLevel: 'warn',
     overlay: true,

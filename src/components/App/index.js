@@ -1,35 +1,36 @@
 // == Import npm
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 // == Import
 import './style.scss';
 import Header from 'src/components/Header';
-// import Homepage from 'src/components/Homepage';
-// import About from 'src/components/About';
-// import Contact from 'src/components/Contact';
+import Accueil from 'src/components/Welcome';
+import QuizList from 'src/components/QuizList';
+import Quiz from 'src/components/QuizList/Quiz';
+import Connexion from 'src/components/Connexion';
+import Inscription from 'src/components/Inscription';
 import Error404 from 'src/components/Error404';
+import Footer from 'src/components/Footer';
 
 // == Composant
-const App = () => (
-  <div className="app">
-    <Header />
-    <Switch>
-      {/* <Route path="/" exact>
-        <Homepage />
-      </Route> */}
-      {/* <Route path="/about" exact>
-        <About />
-      </Route> */}
-      {/* <Route path="/contact" exact>
-        <Contact />
-      </Route> */}
-      <Route>
-        <Error404 />
-      </Route>
-    </Switch>
-  </div>
-);
+function App() {
+  return (
+    <div className="app">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Accueil />} />
+        <Route path="/connexion" element={<Connexion />} />
+        <Route path="/inscription" element={<Inscription />} />
+        <Route path="/quiz-list" element={<QuizList />}>
+          <Route path="/quiz-list/quiz" element={<Quiz />} />
+        </Route>
+        <Route element={<Error404 />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
+}
 
 // == Export
 export default App;

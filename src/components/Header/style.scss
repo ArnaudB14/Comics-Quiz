@@ -70,27 +70,28 @@
   }
 
   &__link {
-    color: black;
+    color: white;
     transition: 0.3s;
   }
 
   &__link:hover {
-    color: rgb(165, 165, 165);
+    color: rgb(168, 168, 168);
     transition: 0.3s;
+    cursor: pointer;
   }
 
   &__logo {
     padding-top: 0.9rem;
 
     &:hover {
-      color: black;
+      color: white;
       transition: 0s;
     }
   }
 
   &__logo,
   &__toggle {
-    color: black;
+    color: white;
     font-size: 1.7rem;
     @media screen and (min-width: 768px) {
       font-size: 2.5rem;
@@ -126,11 +127,11 @@
   left: 0;
   width: 65%;
   height: 3px;
-  background-color: black;
+  background-color: white;
 }
 
 .scroll-header {
-  background-color: black;
+  background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -141,7 +142,7 @@
 }
 
 .scroll-header .nav__menu {
-  background-color: black;
+  background-color: white;
 }
 
 .bx-x {

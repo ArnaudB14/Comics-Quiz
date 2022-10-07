@@ -1,0 +1,66 @@
+.inscription {
+    position: relative;
+    &__container {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .app-form-control.password {
+            margin: 8rem 0;
+        }
+
+        & .app-form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        & .app-form-button{
+            margin-top: 4rem;
+            font-size: 20px;
+            border-radius: 4px;
+            padding: 0.5rem 2rem;
+            border: 2px solid white;
+            color: rgba(#000, 0.8);
+            cursor: pointer;
+            transition: border-color 0.5s, background-color 0.5s, color 0.5s;
+
+            &:hover {
+                background-color: #000;
+                border-color: transparent;
+                color: #fff;                
+            }
+        }
+
+        & input {
+            background: transparent;
+            color: white;
+            border: none;
+            border-bottom: 1px solid white;
+            width: 40rem;
+            padding: 10px 10px 10px 0;
+            font-size: 20px;
+
+            &::placeholder {
+                font-size: 20px;
+                color: white;
+            }
+        }
+
+        &__validation {
+            color: red;
+        }
+    }
+
+    &__background img {
+        height: 100vh;
+        width: 99vw;
+        transform: scaleX(-1);
+    }
+}
+    
+.already-signup {
+    text-align: left;
+    color: white;
+}
