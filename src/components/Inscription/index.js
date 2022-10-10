@@ -45,6 +45,8 @@ export default function Inscription() {
       formRef.current.reset();
       setValidation("");
       navigate("/");
+      console.log(cred.user.email);
+      alert("Inscription réussie !")
 
     } catch (err) {
 

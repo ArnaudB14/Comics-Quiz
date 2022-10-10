@@ -4,13 +4,31 @@
 
 .accueil {
     position: relative;
+    &__title, &__content, &__list{
+        color: white;
+        font-size: 25px;
+        margin-top: 2rem;
+        text-align: left;
+    }
+
+    &__title {
+        &__inscription, &__connexion {
+            border-bottom: 1px solid white;
+            padding-bottom: 3px;
+        }
+    }
+    &__list li {
+        text-decoration: underline;
+        margin: 2rem 0;
+        list-style-type: disc;
+    }
     &__container {
         position: absolute;
         top: 25%;
-        right: 10%;
+        right: 5%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        width: 45%;
     }
     &__background img {
         height: 100vh ;

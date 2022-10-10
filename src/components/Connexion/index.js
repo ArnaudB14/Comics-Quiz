@@ -79,7 +79,7 @@ export default function Inscription() {
             required
             ref={addInputs}
           />
-          <p className='inscription__container__validation'>{validation}</p>
+          <p className='connexion__container__validation'>{validation}</p>
           <div className="app-form-group button">
             <button type="submit" className="app-form-button">
               Connexion

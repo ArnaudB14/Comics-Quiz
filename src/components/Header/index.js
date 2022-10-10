@@ -1,6 +1,6 @@
 // == Import npm
-import React, {useContext} from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, {useContext, useEffect} from 'react';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { signOut } from "firebase/auth";
 import {auth} from "../../firebase-config";
 import { UserContext } from '../../context/userContext';
@@ -10,7 +10,7 @@ import './style.scss';
 
 // == Composant
 export default function Header() {
-
+  
   const {currentUser} = useContext(UserContext)
 
   const navigate = useNavigate()
@@ -72,51 +72,51 @@ export default function Header() {
     <header className="header" id="header">
       <nav className="nav bd-container">
         <h1 className="nav__logo">
-          <Link className="nav__logo nav__link underline" onClick={linkAction} to="/">
+          <NavLink className="nav__logo nav__link underline" onClick={linkAction} to="/">
             Comics Quiz
-          </Link>
+          </NavLink>
         </h1>
         <div className="nav__menu" id="nav-menu">
           { !currentUser ? (
           <ul className="nav__list">
             <li className="nav__item">
-              <Link
-                className="nav__link underline"
+              <NavLink
+                className="nav__link underline accueil"
                 onClick={linkAction}
                 to="/"
               >
                 Accueil
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link
+              <NavLink
                 className="nav__link underline"
                 onClick={linkAction}
                 to="/inscription"
               >
                 Inscription
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link
+              <NavLink
                 className="nav__link underline"
                 onClick={linkAction}
                 to="/connexion"
               >
                 Connexion
-              </Link>
+              </NavLink>
             </li>
           </ul>
             ) : 
             <ul className="nav__list">
             <li className="nav__item">
-              <Link
+              <NavLink
                 className="nav__link underline"
                 onClick={linkAction}
                 to="/"
               >
                 Accueil
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item nav__link underline" onClick={logOut}>
                 Déconnexion

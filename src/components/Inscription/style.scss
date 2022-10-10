@@ -9,7 +9,7 @@
         align-items: center;
 
         & .app-form-control.password {
-            margin: 8rem 0;
+            margin: 6rem 0;
         }
 
         & .app-form-group {
@@ -21,7 +21,8 @@
             font-size: 20px;
             border-radius: 4px;
             padding: 0.5rem 2rem;
-            border: 2px solid white;
+            border: none;
+            background-color: white;
             color: rgba(#000, 0.8);
             cursor: pointer;
             transition: border-color 0.5s, background-color 0.5s, color 0.5s;
@@ -49,7 +50,10 @@
         }
 
         &__validation {
-            color: red;
+            color: rgb(255, 17, 17);
+            margin-top: 2rem;
+            text-align: left;
+            width: 100%;
         }
     }
 

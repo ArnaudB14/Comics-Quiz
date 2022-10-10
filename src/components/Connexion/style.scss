@@ -21,8 +21,9 @@
             font-size: 20px;
             border-radius: 4px;
             padding: 0.5rem 2rem;
-            border: 2px solid white;
-            color: rgba(#000, 0.8);
+            border: none;
+            background-color: white;
+            color: black;
             cursor: pointer;
             transition: border-color 0.5s, background-color 0.5s, color 0.5s;
 
@@ -46,6 +47,13 @@
                 font-size: 20px;
                 color: white;
             }
+        }
+
+        &__validation {
+            color: rgb(255, 255, 255);
+            margin-top: 2rem;
+            text-align: left;
+            width: 100%;
         }
     }
 
