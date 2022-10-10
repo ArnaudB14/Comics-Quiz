@@ -1,6 +1,8 @@
 import React, {useContext, useState} from 'react'
 import { data } from "src/utils/questions/dc";
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './style.scss';
 
@@ -19,6 +21,27 @@ export default function Questions() {
       setClickAnswer(true);
       if (answer === data[currentQuestion].correct) {
         setScore(score + 1);
+        toast.success('Bonne réponse, +1 point !', {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
+      } else {
+        toast.error('Dommage, tu feras mieux la prochaine fois !', {
+          position: "top-right",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
       }
 
       document.querySelector(".quiz-dc__answers-list").style.pointerEvents = "none";
@@ -121,6 +144,18 @@ export default function Questions() {
                 >
                 {answer}
               </p>
+              <ToastContainer
+                position="top-right"
+                autoClose={1500}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+              />
             </div>
           ))}
         </div>
