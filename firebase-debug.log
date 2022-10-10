@@ -1,0 +1,39 @@
+[debug] [2022-10-10T12:37:28.723Z] ----------------------------------------------------------------------
+[debug] [2022-10-10T12:37:28.726Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Étudiant.e.DESKTOP-I0VFSSE\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-10-10T12:37:28.727Z] CLI Version:   11.14.1
+[debug] [2022-10-10T12:37:28.728Z] Platform:      win32
+[debug] [2022-10-10T12:37:28.728Z] Node Version:  v16.17.1
+[debug] [2022-10-10T12:37:28.729Z] Time:          Mon Oct 10 2022 14:37:28 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2022-10-10T12:37:28.729Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-10T12:37:28.743Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-10T12:37:28.744Z] > authorizing via signed-in user (arnaudb14000@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Étudiant.e.DESKTOP-I0VFSSE\Desktop\Créative\Semaine 03 Octobre\comics-quiz
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-10T12:37:33.381Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-10-10T12:37:33.888Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-10-10T12:37:33.889Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project comics-quiz-48c02 (Comics Quiz) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

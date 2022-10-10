@@ -59,6 +59,13 @@ export default function Questions() {
           ${score}/${data.length}
           `}
         </h3>
+
+        <h3 className="quiz-marvel__title">
+          {`Réussite : 
+          ${Math.round((score) / (data.length) * 100)}%
+          `}
+        </h3>
+
         {data.map((data) => (
           <li key={data.id} className="quiz-marvel__end-answers">
               <span>Question: {data.question} Réponse: {data.correct}</span>
@@ -89,6 +96,14 @@ export default function Questions() {
           <img src={background} alt="Wolverine Background" />
         </div>
       <div className="quiz-marvel__container">
+      <div>
+          <select name="level" className="quiz-marvel__level-select">
+            <option value="">-- Choisissez un niveau de difficulté --</option>
+            <option value="debutant">Débutant</option>
+            <option value="confirme">Confirmé</option>
+            <option value="expert">Expert</option>
+          </select>
+        </div>
         <span className="quiz-marvel__questions-number">
           Question : {`${currentQuestion + 1}/${data.length}`}
         </span>
