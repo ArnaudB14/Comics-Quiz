@@ -6,7 +6,8 @@ import { Routes, Route } from 'react-router-dom';
 import './style.scss';
 import Header from 'src/components/Header';
 import Accueil from 'src/components/Welcome';
-import Quiz from 'src/components/Quiz';
+import QuizMarvel from 'src/components/Quiz-marvel';
+import QuizDC from 'src/components/Quiz-dc';
 import Connexion from 'src/components/Connexion';
 import Inscription from 'src/components/Inscription';
 import Error404 from 'src/components/Error404';
@@ -21,8 +22,9 @@ function App() {
         <Route path="/" element={<Accueil />} />
         <Route path="/connexion" element={<Connexion />} />
         <Route path="/inscription" element={<Inscription />} />
-        <Route path="/quiz" element={<Quiz />} />
-        <Route element={<Error404 />} />
+        <Route path="/quiz-marvel" element={<QuizMarvel />} />
+        <Route path="/quiz-dc" element={<QuizDC />} />
+        <Route path='*' element={<Error404 />} />
       </Routes>
       <Footer />
     </div>

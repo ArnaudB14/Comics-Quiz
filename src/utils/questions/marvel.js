@@ -58,7 +58,7 @@ export const data = [
     {
       question:
         "Dans quel film Stan Lee fait-il son dernier caméo ?",
-      answers: ["Captain Marvel", "Ant-Man et la Guêpe", "Spider-Man: Far From Home", "Avengers: Endgame"],
+      answers: ["Doctor Strange in the Multiverse of Madness", "Ant-Man et la Guêpe", "Spider-Man: Far From Home", "Avengers: Endgame"],
       correct: "Avengers: Endgame",
       id: "8"
     },

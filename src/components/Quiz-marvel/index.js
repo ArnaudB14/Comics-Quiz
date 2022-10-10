@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react'
-import { data } from "./Questions/marvel";
+import { data } from "src/utils/questions/marvel";
 import { Link } from 'react-router-dom';
 
 import './style.scss';
@@ -21,11 +21,11 @@ export default function Questions() {
         setScore(score + 1);
       }
 
-      document.querySelector(".quiz__answers-list").style.pointerEvents = "none";
+      document.querySelector(".quiz-marvel__answers-list").style.pointerEvents = "none";
     };
 
     const resetPointer = () => {
-      document.querySelector(".quiz__answers-list").style.pointerEvents = "auto";
+      document.querySelector(".quiz-marvel__answers-list").style.pointerEvents = "auto";
     }
 
     const reset = () => {
@@ -48,30 +48,30 @@ export default function Questions() {
 
   if (finish) {
   return (
-    <div className="quiz">
-      <div className='accueil__background'>
-        <img src={background} alt="Captain Background" />
+    <div className="quiz-marvel">
+      <div className='quiz-marvel__background'>
+        <img src={background} alt="Wolverine Background" />
       </div>
 
-      <div className="quiz__container">
-        <h3 className="quiz__title">
+      <div className="quiz-marvel__container">
+        <h3 className="quiz-marvel__title">
           {`Ton score est de
           ${score}/${data.length}
-          .`}
+          `}
         </h3>
         {data.map((data) => (
-          <li key={data.id} className="quiz__end-answers">
+          <li key={data.id} className="quiz-marvel__end-answers">
               <span>Question: {data.question} Réponse: {data.correct}</span>
           </li>
         ))}
         <button
-          className="quiz__start-over"
+          className="quiz-marvel__start-over"
           onClick={() => startOver()}
           >
           Recommencer
         </button>
         <button
-          className="quiz__back-to-quiz"
+          className="quiz-marvel__back-to-quiz"
           >
           <Link to="/">
            Retour à la liste des Quiz
@@ -84,21 +84,21 @@ export default function Questions() {
   } else {
 
   return (
-    <div className="quiz">
-        <div className='accueil__background'>
-          <img src={background} alt="Captain Background" />
+    <div className="quiz-marvel">
+        <div className='quiz-marvel__background'>
+          <img src={background} alt="Wolverine Background" />
         </div>
-      <div className="quiz__container">
-        <span className="quiz__questions-number">
+      <div className="quiz-marvel__container">
+        <span className="quiz-marvel__questions-number">
           Question : {`${currentQuestion + 1}/${data.length}`}
         </span>
-        <span className="quiz__questions-progression">
-          Progression : {`${(currentQuestion + 1) / (data.length) * 100}%`}
+        <span className="quiz-marvel__questions-progression">
+          Progression : {`${Math.round((currentQuestion + 1) / (data.length) * 100)}%`}
         </span>
-        <h2 className="quiz__questions">
+        <h2 className="quiz-marvel__questions">
           {data[currentQuestion].question}
         </h2>
-        <div className="quiz__answers-list">
+        <div className="quiz-marvel__answers-list">
           {data[currentQuestion].answers.map((answer) => (
             <div>
               <p
@@ -126,7 +126,7 @@ export default function Questions() {
         </div>
      {currentQuestion < data.length - 1 && (
       <button
-        className="quiz__next-question"
+        className="quiz-marvel__next-question"
         onClick={() => {
         setCurrentQuestion(currentQuestion + 1);
         resetPointer();
@@ -138,14 +138,14 @@ export default function Questions() {
     )}
     {currentQuestion === data.length - 1 && (
       <button
-        className="quiz__finish"
+        className="quiz-marvel__finish"
         onClick={() => finishHandler()}
         >
         Voir mon résultat
       </button>
     )}
     {show && (
-      <p className="quiz__correct-answer">
+      <p className="quiz-marvel__correct-answer">
         Réponse : {data[currentQuestion].correct}
       </p>
     )}

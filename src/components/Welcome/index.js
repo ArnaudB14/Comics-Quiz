@@ -15,15 +15,15 @@ export default function Accueil() {
   return (
     <main className="accueil">
         <div className='accueil__background'>
-          <img src={background} alt="Captain Background" />
+          <img src={background} alt="Captain America Background" />
         </div>
         { currentUser ? (
         <div className="accueil__container">
             <h1 className='accueil__title'>Bienvenue</h1>
             <p className='accueil__content'>Voici la liste de nos Quiz :</p>
             <ul className='accueil__list'>
-              <li><Link to="/quiz">Quiz Marvel</Link></li>
-              <li>Quiz DC</li>
+              <li><Link to="/quiz-marvel">Quiz Marvel</Link></li>
+              <li><Link to="/quiz-dc">Quiz DC</Link></li>
             </ul>
         </div>
         ) :
