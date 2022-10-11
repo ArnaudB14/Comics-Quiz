@@ -7,7 +7,7 @@
     "lint:fix": "eslint --fix src/**/*.js",
     "clean": "rm -rf dist",
     "clean:all": "rm -rf dist node_modules yarn.lock package-lock.json",
-    "surge": "surge dist comics-quiz.surge.sh"
+    "surge": "yarn build && cp dist/index.html dist/200.html && surge dist comics-quiz.surge.sh"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
