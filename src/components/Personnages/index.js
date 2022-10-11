@@ -38,7 +38,7 @@ export default function Personnages() {
         {!loading && (
         <div className='personnages__container'>
           {data.data.results.map(item => (
-            <li key={item.id} className="personnages_liste">{item.name}</li>
+            <li key={item.id} className="personnages__liste">{item.name}</li>
           ))}
         </div>
       )}

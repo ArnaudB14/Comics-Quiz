@@ -8,11 +8,11 @@
     }
     &__container {
         position: absolute;
-        top: 25%;
+        top: 21%;
         right: 5%;
-        width: 45%;
+        width: 60%;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         grid-gap: 5px;
         grid-auto-rows: minmax(100px, auto);
         color: white;
@@ -21,5 +21,20 @@
         height: 100vh ;
         width: 99vw;
         transform: scaleX(-1);
+    }
+    &__liste {
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        list-style-type: none;
+        padding: 3rem;
+        margin: 10px;
+        transition: transform .1s;
+
+        &:hover {
+            -ms-transform: scale(1.1); /* IE 9 */
+            -webkit-transform: scale(1.1); /* Safari 3-8 */
+            transform: scale(1.1);
+        }
     }
 }

@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <main className="footer">
         <div className="footer__container">
-          <h1>Test footer</h1>
+          <h1>©Arnaud Barbey</h1>
         </div>
     </main>
   );
