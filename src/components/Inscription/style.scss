@@ -67,4 +67,8 @@
 .already-signup {
     text-align: left;
     color: white;
+
+    &:hover {
+        color: rgb(212, 212, 212);
+    }
 }

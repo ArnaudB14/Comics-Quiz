@@ -1,15 +1,15 @@
-.connexion {
+.forgot-password {
     position: relative;
     &__container {
         position: absolute;
-        top: 25%;
+        top: 38%;
         right: 10%;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         & .app-form-control.email {
-            margin: 8rem 0;
+            margin: 2rem 0;
         }
 
         & .app-form-group {
@@ -65,8 +65,15 @@
             font-size: 20px;
 
             &:hover {
-                color: rgb(212, 212, 212);;
+                color: rgb(212, 212, 212);
             }
+        }
+
+        &__mail {
+            color: rgb(255, 255, 255);
+            text-align: left;
+            width: 100%;
+            margin-bottom: 3rem;
         }
     }
 
@@ -76,7 +83,7 @@
     }
 }
 
-.go-to-login {
+.go-to-connexion {
     text-align: left;
     color: white;
 

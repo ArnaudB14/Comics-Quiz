@@ -8,7 +8,7 @@ import './style.scss';
 
 import background from 'src/assets/img/wolverine-background-marvel-quiz.png';
 
-export default function Questions() {
+export default function QuizMarvel() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [myAnswer, setMyAnswer] = useState("");
     const [score, setScore] = useState(0);
@@ -119,14 +119,14 @@ export default function Questions() {
           <img src={background} alt="Wolverine Background" />
         </div>
       <div className="quiz-marvel__container">
-      <div>
+        {/* <div>
           <select name="level" className="quiz-marvel__level-select">
             <option value="">-- Choisissez un niveau de difficulté --</option>
             <option value="debutant">Débutant</option>
             <option value="confirme">Confirmé</option>
             <option value="expert">Expert</option>
           </select>
-        </div>
+        </div> */}
         <span className="quiz-marvel__questions-number">
           Question : {`${currentQuestion + 1}/${data.length}`}
         </span>

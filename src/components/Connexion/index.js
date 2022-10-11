@@ -10,7 +10,7 @@ import background from 'src/assets/img/flash-background-connexion.png';
 // == Composant
 export default function Inscription() {
 
-  const { signIn } = useContext(UserContext);
+  const { signIn, resetPassword } = useContext(UserContext);
 
   const navigate = useNavigate();
 
@@ -41,6 +41,11 @@ export default function Inscription() {
     } catch {
       setValidation("Email ou Mot de passe incorrect")
     }
+  }
+
+  const forgotPassword = () => {
+    const email = inputs.current[0].value;
+    if (email) resetPassword(email).then(() => (inputs.current[0].value = ""))
   }
 
   return (
@@ -79,6 +84,7 @@ export default function Inscription() {
             required
             ref={addInputs}
           />
+          <Link to="/mot-de-passe-oublie" className="connexion__container__forgot-password">Mot de passe oublié ?</Link>
           <p className='connexion__container__validation'>{validation}</p>
           <div className="app-form-group button">
             <button type="submit" className="app-form-button">

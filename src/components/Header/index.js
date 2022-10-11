@@ -118,6 +118,15 @@ export default function Header() {
                 Accueil
               </NavLink>
             </li>
+            <li className="nav__item">
+              <NavLink
+                className="nav__link underline"
+                onClick={linkAction}
+                to="/liste-personnages"
+              >
+                Liste des personnages
+              </NavLink>
+            </li>
             <li className="nav__item nav__link underline" onClick={logOut}>
                 Déconnexion
             </li>

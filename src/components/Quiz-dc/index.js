@@ -8,7 +8,7 @@ import './style.scss';
 
 import background from 'src/assets/img/greenarrow-background-dc-quiz.png';
 
-export default function Questions() {
+export default function QuizDC() {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [myAnswer, setMyAnswer] = useState("");
     const [score, setScore] = useState(0);
