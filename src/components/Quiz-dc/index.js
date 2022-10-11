@@ -69,6 +69,12 @@ export default function QuizDC() {
       setScore(0);
     };
 
+    //CSS      
+    const fillerStyles = {     
+      width: `${Math.round((currentQuestion) / (data.length) * 100)}%`,
+    }
+    //
+
   if (finish) {
   return (
     <div className="quiz-dc">
@@ -116,8 +122,13 @@ export default function QuizDC() {
           Question : {`${currentQuestion + 1}/${data.length}`}
         </span>
         <span className="quiz-dc__questions-progression">
-          Progression : {`${Math.round((currentQuestion + 1) / (data.length) * 100)}%`}
+          Progression : {`${Math.round((currentQuestion) / (data.length) * 100)}%`}
         </span>
+        <div className="quiz-dc__container-styles">
+          <div style={fillerStyles} className="quiz-dc__filler-styles">
+            <span className="quiz-dc__label-styles"></span>
+          </div>
+        </div>
         <h2 className="quiz-dc__questions">
           {data[currentQuestion].question}
         </h2>

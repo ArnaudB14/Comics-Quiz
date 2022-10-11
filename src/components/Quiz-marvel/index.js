@@ -9,6 +9,7 @@ import './style.scss';
 import background from 'src/assets/img/wolverine-background-marvel-quiz.png';
 
 export default function QuizMarvel() {
+
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [myAnswer, setMyAnswer] = useState("");
     const [score, setScore] = useState(0);
@@ -68,6 +69,12 @@ export default function QuizMarvel() {
       setMyAnswer("");
       setScore(0);
     };
+
+    //CSS      
+    const fillerStyles = {     
+      width: `${Math.round((currentQuestion) / (data.length) * 100)}%`,
+    }
+    //
 
   if (finish) {
   return (
@@ -131,8 +138,13 @@ export default function QuizMarvel() {
           Question : {`${currentQuestion + 1}/${data.length}`}
         </span>
         <span className="quiz-marvel__questions-progression">
-          Progression : {`${Math.round((currentQuestion + 1) / (data.length) * 100)}%`}
+          Progression : {`${Math.round((currentQuestion) / (data.length) * 100)}%`}
         </span>
+        <div className="quiz-marvel__container-styles">
+          <div style={fillerStyles} className="quiz-marvel__filler-styles">
+            <span className="quiz-marvel__label-styles"></span>
+          </div>
+        </div>
         <h2 className="quiz-marvel__questions">
           {data[currentQuestion].question}
         </h2>
